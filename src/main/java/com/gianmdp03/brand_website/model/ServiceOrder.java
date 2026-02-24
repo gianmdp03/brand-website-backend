@@ -1,6 +1,7 @@
 package com.gianmdp03.brand_website.model;
 
-import com.gianmdp03.brand_website.model.servicedetail.ServiceDetail;
+import com.gianmdp03.brand_website.extra._enum.OrderStatus;
+import com.gianmdp03.brand_website.extra.servicedetail.ServiceDetail;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,10 @@ public class ServiceOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private OrderStatus orderStatus = OrderStatus.PENDING;
 
     @JdbcTypeCode(SqlTypes.JSON) //crear clases
     @Column(columnDefinition = "jsonb")

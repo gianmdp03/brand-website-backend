@@ -1,4 +1,4 @@
-package com.gianmdp03.brand_website.model.servicedetail;
+package com.gianmdp03.brand_website.extra.servicedetail;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

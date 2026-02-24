@@ -1,4 +1,4 @@
-package com.gianmdp03.brand_website.model.servicedetail.hardware;
+package com.gianmdp03.brand_website.extra.servicedetail.hardware;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

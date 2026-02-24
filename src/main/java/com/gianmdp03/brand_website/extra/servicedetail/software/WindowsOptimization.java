@@ -1,6 +1,6 @@
-package com.gianmdp03.brand_website.model.servicedetail.software;
+package com.gianmdp03.brand_website.extra.servicedetail.software;
 
-import com.gianmdp03.brand_website.model.servicedetail.ServiceDetail;
+import com.gianmdp03.brand_website.extra.servicedetail.ServiceDetail;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -1,6 +1,6 @@
 package com.gianmdp03.brand_website.dto.serviceorder;
 
-import com.gianmdp03.brand_website.model.servicedetail.ServiceDetail;
+import com.gianmdp03.brand_website.extra.servicedetail.ServiceDetail;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
