@@ -24,6 +24,8 @@ public class Client {
     @Column(nullable = false, unique = true)
     private String email;
 
+    private boolean deleted = false;
+
     public Client(String name, String lastname, String email) {
         this.name = name;
         this.lastname = lastname;
