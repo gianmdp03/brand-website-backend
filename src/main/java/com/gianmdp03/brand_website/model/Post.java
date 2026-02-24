@@ -21,11 +21,8 @@ public class Post {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String description;
 
-    private String imageUrl;
-
-    public Post(String name, String description, String imageUrl) {
+    public Post(String name, String description) {
         this.name = name;
         this.description = description;
-        this.imageUrl = imageUrl;
     }
 }
