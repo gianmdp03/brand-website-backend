@@ -21,8 +21,12 @@ public class Client {
     @Column(nullable = false)
     private String lastname;
 
-    public Client(String name, String lastname) {
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    public Client(String name, String lastname, String email) {
         this.name = name;
         this.lastname = lastname;
+        this.email = email;
     }
 }
