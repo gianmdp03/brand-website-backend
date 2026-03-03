@@ -2,6 +2,7 @@ package com.gianmdp03.brand_website.mapper;
 
 import com.gianmdp03.brand_website.dto.serviceorder.ServiceOrderDetailDTO;
 import com.gianmdp03.brand_website.dto.serviceorder.ServiceOrderRequestDTO;
+import com.gianmdp03.brand_website.dto.serviceorder.ServiceOrderUpdateDTO;
 import com.gianmdp03.brand_website.model.ServiceOrder;
 import org.mapstruct.*;
 
@@ -14,6 +15,5 @@ public abstract class ServiceOrderMapper {
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "client", ignore = true)
-    public abstract void updateEntityFromDto(ServiceOrderRequestDTO dto, @MappingTarget ServiceOrder entity);
-
+    public abstract void updateEntityFromDto(ServiceOrderUpdateDTO dto, @MappingTarget ServiceOrder entity);
 }

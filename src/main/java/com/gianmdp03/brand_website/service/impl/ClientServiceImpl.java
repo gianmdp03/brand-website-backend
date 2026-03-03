@@ -2,6 +2,7 @@ package com.gianmdp03.brand_website.service.impl;
 
 import com.gianmdp03.brand_website.dto.client.ClientDetailDTO;
 import com.gianmdp03.brand_website.dto.client.ClientRequestDTO;
+import com.gianmdp03.brand_website.dto.client.ClientUpdateDTO;
 import com.gianmdp03.brand_website.exception.NotFoundException;
 import com.gianmdp03.brand_website.mapper.ClientMapper;
 import com.gianmdp03.brand_website.model.Client;
@@ -60,7 +61,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     @Transactional
-    public ClientDetailDTO updateClient(Long id, ClientRequestDTO dto) {
+    public ClientDetailDTO updateClient(Long id, ClientUpdateDTO dto) {
         Client client = repository.findById(id).orElseThrow(()-> new NotFoundException("Client ID does not exist"));
         mapper.updateEntityFromDto(dto, client);
         return mapper.toDetailDto(repository.save(client));

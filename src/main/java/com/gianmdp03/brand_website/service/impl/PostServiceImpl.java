@@ -2,6 +2,7 @@ package com.gianmdp03.brand_website.service.impl;
 
 import com.gianmdp03.brand_website.dto.post.PostDetailDTO;
 import com.gianmdp03.brand_website.dto.post.PostRequestDTO;
+import com.gianmdp03.brand_website.dto.post.PostUpdateDTO;
 import com.gianmdp03.brand_website.exception.NotFoundException;
 import com.gianmdp03.brand_website.mapper.PostMapper;
 import com.gianmdp03.brand_website.model.Post;
@@ -45,7 +46,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     @Transactional
-    public PostDetailDTO updatePost(Long id, PostRequestDTO dto) {
+    public PostDetailDTO updatePost(Long id, PostUpdateDTO dto) {
         Post post = repository.findById(id).orElseThrow(()-> new NotFoundException("Post ID does not exist"));
         mapper.updateEntityFromDto(dto, post);
         return mapper.toDetailDto(repository.save(post));

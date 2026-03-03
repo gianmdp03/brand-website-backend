@@ -10,6 +10,7 @@ import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Map;
 
 @Entity
@@ -37,9 +38,13 @@ public class ServiceOrder {
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal price;
 
-    public ServiceOrder(Map<String, ServiceDetail> serviceDetail, Client client, BigDecimal price) {
+    @Column(nullable = false)
+    private LocalDate date;
+
+    public ServiceOrder(Map<String, ServiceDetail> serviceDetail, Client client, BigDecimal price, LocalDate date) {
         this.serviceDetail = serviceDetail;
         this.client = client;
         this.price = price;
+        this.date = date;
     }
 }

@@ -3,6 +3,7 @@ package com.gianmdp03.brand_website.service.impl;
 import com.gianmdp03.brand_website.dto.serviceorder.ServiceOrderDetailDTO;
 import com.gianmdp03.brand_website.dto.serviceorder.ServiceOrderRequestDTO;
 import com.gianmdp03.brand_website.dto.serviceorder.ServiceOrderStatusDTO;
+import com.gianmdp03.brand_website.dto.serviceorder.ServiceOrderUpdateDTO;
 import com.gianmdp03.brand_website.exception.NotFoundException;
 import com.gianmdp03.brand_website.mapper.ServiceOrderMapper;
 import com.gianmdp03.brand_website.model.Client;
@@ -52,7 +53,7 @@ public class ServiceOrderServiceImpl implements ServiceOrderService {
 
     @Override
     @Transactional
-    public ServiceOrderDetailDTO updateServiceOrder(Long id, ServiceOrderRequestDTO dto) {
+    public ServiceOrderDetailDTO updateServiceOrder(Long id, ServiceOrderUpdateDTO dto) {
         ServiceOrder serviceOrder = repository.findById(id)
                 .orElseThrow(()-> new NotFoundException("Service Order ID does not exist"));
         mapper.updateEntityFromDto(dto, serviceOrder);

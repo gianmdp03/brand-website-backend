@@ -2,6 +2,7 @@ package com.gianmdp03.brand_website.mapper;
 
 import com.gianmdp03.brand_website.dto.post.PostDetailDTO;
 import com.gianmdp03.brand_website.dto.post.PostRequestDTO;
+import com.gianmdp03.brand_website.dto.post.PostUpdateDTO;
 import com.gianmdp03.brand_website.model.Post;
 import org.mapstruct.*;
 
@@ -12,5 +13,5 @@ public abstract class PostMapper {
     public abstract PostDetailDTO toDetailDto(Post entity);
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     @Mapping(target = "id", ignore = true)
-    public abstract void updateEntityFromDto(PostRequestDTO dto, @MappingTarget Post entity);
+    public abstract void updateEntityFromDto(PostUpdateDTO dto, @MappingTarget Post entity);
 }
