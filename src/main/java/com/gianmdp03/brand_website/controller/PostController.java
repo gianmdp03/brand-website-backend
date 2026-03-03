@@ -13,7 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("/api/posts")
+@RestController
+@RequestMapping("/api/posts")
 @RequiredArgsConstructor
 public class PostController {
     private final PostService service;
