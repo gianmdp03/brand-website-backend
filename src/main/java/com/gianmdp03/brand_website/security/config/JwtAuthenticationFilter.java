@@ -1,6 +1,6 @@
 package com.gianmdp03.brand_website.security.config;
 
-import com.stockstore.stockstore.security.user.service.JwtService;
+import com.gianmdp03.brand_website.security.user.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
